@@ -15,6 +15,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { InfoIcon } from "@chakra-ui/icons";
+import { Link } from "react-router-dom";
  const LoginSection=()=> {
   const { isOpen, onOpen, onClose } = useDisclosure();
    const [open,setOpen]=useState(false)
@@ -47,12 +48,18 @@ import { InfoIcon } from "@chakra-ui/icons";
                     <Button variant="link">My profile</Button>
                     <Button variant="link">My Puja Bookings</Button>
                     <Button variant="link">My Ramotsav Bookings</Button>
+                    <Link to="/content-2"> 
                     <Button variant="link" colorScheme="green">
-                      Book a Puja
+                    
+                         Book a Puja
                       <Text as="span" color="green.500" ml={2}>
                         New
                       </Text>
+                     
+                     
                     </Button>
+                    </Link>
+                   
                   </Stack>
                 </Box>
                 <Divider />

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Box, SimpleGrid, Card, CardBody, Text, Button, Heading, Divider } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
+import PujaDetails from './PujaDetails';
 
 function PujaPackages() {
   const packages = [
@@ -55,7 +57,10 @@ function PujaPackages() {
               {pkg.description.map((line, idx) => (
                 <Text key={idx} mb={1}>{line}</Text>
               ))}
-              <Button colorScheme="green" mt={2}>Participants </Button>
+              
+              <PujaDetails/>
+             
+             
             </CardBody>
           </Card>
         ))}

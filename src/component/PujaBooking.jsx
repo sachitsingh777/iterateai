@@ -1,26 +1,27 @@
-import { Box, Button, Flex, Heading, HStack, Image, Link, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, HStack, Image,  Stack, Text } from "@chakra-ui/react";
 import { CalendarIcon, ChevronDownIcon, InfoIcon } from "@chakra-ui/icons";
+import { Link } from "react-router-dom";
 
-function MainPage() {
+const PujaBooking=()=>{
   return (
     <Box minH="100vh" bg="white">
     
-      <Box as="main" p={4}>
-        <Text fontSize="sm" color="gray.600" mb={4}>
-          <Link>Home</Link> &gt;{" "}
-          <Link>Sri Mandir Puja Seva</Link> &gt; Devshayani Ekadashi Special
-        </Text>
+      <Box as="main"  p={4}>
+      <Flex padding={"16px"} justifyContent={"between"} background="rgb(254 245 236)" gap={"5"} alignItems="center" fontSize="md"  mb={4}>
+  <Box>
+    <Link>Home</Link> &gt;{' '}
+  </Box>
+  <Box>
+    <Link>Sri Mandir Puja Seva</Link> &gt;{' '}
+  </Box>
+  <Box>
+  Devshayani Ekadashi Special 16,000 Brihaspati Graha Mool Mantra Jaap & Sudarshan Havan to find an Ideal Partner and</Box>
+</Flex>
         <Flex direction={{ base: "column", md: "row" }} gap={4}>
           <Box position="relative">
-            <Image src="/placeholder.svg" alt="Devshayani Ekadashi Special" rounded="lg" />
+            <Image src="https://www.srimandir.com/_next/image?url=https%3A%2F%2Fsrm-cdn.a4b.io%2Fyoda%2F1720550494790.webp&w=1920&q=75" alt="Devshayani Ekadashi Special" rounded="lg" />
             <Box position="absolute" top={2} left={2} bg="white" p={2} rounded="lg" shadow="lg">
-              <Flex align="center">
-                <Image src="/placeholder.svg" alt="Sri Mandir Logo" boxSize="40px" />
-                <Box ml={2}>
-                  <Heading as="h2" size="md" fontWeight="bold">Sri Mandir</Heading>
-                  <Text fontSize="sm" color="gray.600">Puja Seva</Text>
-                </Box>
-              </Flex>
+              
             </Box>
             <Box position="absolute" bottom={2} left={2} bg="white" p={2} rounded="lg" shadow="lg">
               <Heading as="h3" size="md" color="orange.600">DEVSHAYANI EKADASHI SPECIAL</Heading>
@@ -60,19 +61,16 @@ function MainPage() {
                 </Stack>
               </HStack>
             </Box>
-            <HStack mt={4}>
-              <Avatar src="/placeholder-user.jpg" name="User 1" />
-              <Avatar src="/placeholder-user.jpg" name="User 2" />
-              <Avatar src="/placeholder-user.jpg" name="User 3" />
-              <Avatar src="/placeholder-user.jpg" name="User 4" />
-              <Avatar src="/placeholder-user.jpg" name="User 5" />
-            </HStack>
+           
             <Box mt={4}>
               <Text fontSize="lg" fontWeight="bold" color="red.600">
                 Till now 2,00,000+ Devotees have participated in Pujas conducted by Sri Mandir Puja Seva.
               </Text>
             </Box>
+            <Link to="/puja-packages"> 
             <Button mt={4} colorScheme="green" color="white">Select puja package</Button>
+            </Link>
+           
           </Box>
         </Flex>
       </Box>
@@ -80,4 +78,4 @@ function MainPage() {
   );
 }
 
-export default MainPage;
+export default PujaBooking;

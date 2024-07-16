@@ -1,24 +1,25 @@
 import React from 'react'
-import { Box, Text, Image, Heading } from '@chakra-ui/react';
+import { Box, Text, Image, Heading, SimpleGrid, Card, CardBody, Button } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 const Content2 = () => {
     const pujas = [
         {
           title: "16,000 Brihaspati Graha Mool Mantra Jaap & Sudarshan Havan",
           location: "Trimbakeshwar, Nashik",
           participants: 6,
-          image: "path/to/image1.jpg"
+          image: "https://www.srimandir.com/_next/image?url=https%3A%2F%2Fsrm-cdn.a4b.io%2Fyoda%2F1720550478895.webp&w=1920&q=75"
         },
         {
           title: "Pitru Dosha Nivaran Puja and Haridwar Ganga Abhishek Puja",
           location: "Haridwar, Gangotri, Varanasi",
           participants: 9,
-          image: "path/to/image2.jpg"
+          image: "https://www.srimandir.com/_next/image?url=https%3A%2F%2Fsrm-cdn.a4b.io%2Fyoda%2F1720553966379.webp&w=1920&q=75"
         },
         {
           title: "Shri Baba Shyam Puja, Abhishek and Shipra Aarti",
           location: "Ujjain, Madhya Pradesh",
           participants: 12,
-          image: "path/to/image3.jpg"
+          image: "https://www.srimandir.com/_next/image?url=https%3A%2F%2Fsrm-cdn.a4b.io%2Fyoda%2F1720615184459.webp&w=1920&q=75"
         }
       ];
   return (
@@ -37,7 +38,10 @@ const Content2 = () => {
               <Heading size="md">{puja.title}</Heading>
               <Text>Location: {puja.location}</Text>
               <Text>Participants: {puja.participants}</Text>
-              <Button colorScheme="green" mt={2}>Participants</Button>
+             <Link to="/puja-booking"> 
+             <Button colorScheme="green" mt={2}>Participants</Button>
+             </Link>
+             
             </CardBody>
           </Card>
         ))}

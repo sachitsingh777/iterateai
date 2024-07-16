@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <Flex as="header" align="center" justify="space-between" p={4} borderBottom="1px" borderColor="gray.200">
     <Flex align="center" spacing={2}>
-      <Image src="/placeholder.svg" alt="Sri Mandir Logo" boxSize="40px" />
+      <Image src="https://www.srimandir.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg_puja_seva_logo_en.e294bb15.svg&w=256&q=75" alt="Sri Mandir Logo" boxSize="40px" />
       <Box ml={2}>
         <Heading as="h1" size="lg" fontWeight="bold">Sri Mandir</Heading>
         <Text fontSize="sm" color="gray.600">Puja Seva</Text>
@@ -14,7 +14,7 @@ const Navbar = () => {
     </Flex>
     <HStack spacing={4}>
       <Link color="gray.800">Home</Link>
-      <Link color="orange.600" fontWeight="semibold">Puja</Link>
+      <Link color="gray.600">Puja</Link>
       <Link color="gray.800">Panchang</Link>
       <Link color="gray.800">Temples</Link>
       <Link color="gray.800">Library</Link>
